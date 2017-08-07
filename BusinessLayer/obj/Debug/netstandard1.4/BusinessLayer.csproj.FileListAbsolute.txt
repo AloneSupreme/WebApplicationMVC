@@ -1,0 +1,7 @@
+C:\Users\KabbiReddy\documents\visual studio 2017\Projects\WebApplicationMVC\BusinessLayer\bin\Debug\netstandard1.4\BusinessLayer.deps.json
+C:\Users\KabbiReddy\documents\visual studio 2017\Projects\WebApplicationMVC\BusinessLayer\bin\Debug\netstandard1.4\BusinessLayer.dll
+C:\Users\KabbiReddy\documents\visual studio 2017\Projects\WebApplicationMVC\BusinessLayer\bin\Debug\netstandard1.4\BusinessLayer.pdb
+C:\Users\KabbiReddy\documents\visual studio 2017\Projects\WebApplicationMVC\BusinessLayer\obj\Debug\netstandard1.4\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\KabbiReddy\documents\visual studio 2017\Projects\WebApplicationMVC\BusinessLayer\obj\Debug\netstandard1.4\BusinessLayer.AssemblyInfo.cs
+C:\Users\KabbiReddy\documents\visual studio 2017\Projects\WebApplicationMVC\BusinessLayer\obj\Debug\netstandard1.4\BusinessLayer.dll
+C:\Users\KabbiReddy\documents\visual studio 2017\Projects\WebApplicationMVC\BusinessLayer\obj\Debug\netstandard1.4\BusinessLayer.pdb
