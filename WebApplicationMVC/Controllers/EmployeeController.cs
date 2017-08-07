@@ -65,10 +65,25 @@ namespace WebApplicationMVC.Controllers
         }
 
         [HttpGet]
-        public ActionResult Edit(int id)
+        [ActionName("Edit")]
+        public ActionResult Edit_Get(int id)
         {
             EmployeeContext emp = new EmployeeContext();
             Employee employee = emp.Employees.Single(e => e.EmployeeId == id);
+
+            return View(employee);
+        }
+
+        [HttpPost]
+        [ActionName("Edit")]
+        public ActionResult Edit_Post(Employee employee)
+        {
+            if (ModelState.IsValid) { 
+                EmployeeContext emp = new EmployeeContext();
+                emp.SaveEmployee(employee);
+
+                return RedirectToAction("AllEmployeeDetails");
+            }
 
             return View(employee);
         }
