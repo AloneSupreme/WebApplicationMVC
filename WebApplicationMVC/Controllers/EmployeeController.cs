@@ -76,16 +76,27 @@ namespace WebApplicationMVC.Controllers
 
         [HttpPost]
         [ActionName("Edit")]
-        public ActionResult Edit_Post(Employee employee)
+        public ActionResult Edit_Post(int id)
         {
+            EmployeeContext empCnxt = new EmployeeContext();
+            Employee employee = empCnxt.Employees.Single(x => x.EmployeeId == id);
+            UpdateModel(employee, new string[] { "EmployeeId", "Gender", "City", "DepartmentId", "DateOfBirth" });
             if (ModelState.IsValid) { 
-                EmployeeContext emp = new EmployeeContext();
-                emp.SaveEmployee(employee);
+                empCnxt.SaveEmployee(employee);
 
                 return RedirectToAction("AllEmployeeDetails");
             }
 
             return View(employee);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            EmployeeContext empCnxt = new EmployeeContext();
+            empCnxt.DeleteEmployee(id);
+
+            return RedirectToAction("AllEmployeeDetails");
         }
     }
 }

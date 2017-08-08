@@ -96,5 +96,24 @@ namespace WebApplicationMVC.Models
 
             }
         }
+
+        public void DeleteEmployee(int id)
+        {
+            string connectionstring = ConfigurationManager.ConnectionStrings["EmployeeContext"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(connectionstring))
+            {
+                SqlCommand cmd = new SqlCommand("spDeleteEmployee", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter paramId = new SqlParameter();
+                paramId.ParameterName = "@EmployeeId";
+                paramId.Value = id;
+                cmd.Parameters.Add(paramId);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+
+            }
+        }
     }
 }
